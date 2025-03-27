@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities - Residencia del Hamor</title>
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+</head>
+<body class="bg-gray-100">
+    
+    <nav class="bg-white p-4 fixed w-full top-0 left-0 z-50 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-gray-900 text-2xl font-semibold hover:text-blue-600 transition">Residencia del Hamor</a>
+            <div>
+                <a href="index.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Home</a>
+                <a href="accommodations.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Accommodations</a>
+                <a href="amenities.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Amenities</a>
+                <a href="booking.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Booking</a>
+                <a href="contact.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Amenities & Activities Section -->
+    <section id="amenities" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Amenities & Activities</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Discover world-class amenities designed for ultimate relaxation and adventure.
+            </p>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div class="max-w-5xl mx-auto">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://th.bing.com/th/id/OIP.XlTz_ONz3GPlY1uMKvwZuAHaFj?w=264&h=198&c=7&r=0&o=5&dpr=1.1&pid=1.7" 
+                             alt="Spa" 
+                             class="rounded-lg shadow-lg w-full object-cover">
+                        <p class="text-center text-lg mt-4 font-semibold text-gray-800">Relaxing Spa</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://farm4.staticflickr.com/3135/4595124818_69000356a4_z.jpg" 
+                             alt="Infinity Pool" 
+                             class="rounded-lg shadow-lg w-full object-cover">
+                        <p class="text-center text-lg mt-4 font-semibold text-gray-800">Infinity Pool</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://www.theluxeguide.com/wp-content/uploads/2022/09/hwjsofg47xctnbzuvk3e96dmpqra0i15-800x528.jpg" 
+                             alt="Fine Dining" 
+                             class="rounded-lg shadow-lg w-full object-cover">
+                        <p class="text-center text-lg mt-4 font-semibold text-gray-800">Fine Dining Restaurant</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://www.campsites.ph/uploads/images/campsite-95-paradiso-de-casiguran-25b3058af9a2a18230c0aa27ef4fc59c.jpg" 
+                             alt="Adventure Tours" 
+                             class="rounded-lg shadow-lg w-full object-cover">
+                        <p class="text-center text-lg mt-4 font-semibold text-gray-800">Adventure Tours</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper Script -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+</html>

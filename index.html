@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Residencia del Hamor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .swiper-slide img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .swiper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Added styles for responsive images and mobile optimization */
+        .card-img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-blue-600 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="text-white text-2xl font-semibold">Residencia del Hamor</a>
+            <div>
+                <a href="#home" class="text-white mx-4">Home</a>
+                <a href="accommodations.html" class="text-white mx-4">Accommodations</a>
+                <a href="amenities.html" class="text-white mx-4">Amenities</a>
+                <a href="booking.html" class="text-white mx-4">Booking</a>
+                <a href="contact.html" class="text-white mx-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section with Swiper -->
+    <section id="home" class="relative w-full h-screen overflow-hidden">
+        <div class="swiper mySwiper w-full h-full">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://th.bing.com/th/id/R.f5e80cd6466cfa879967f1584a2ec905?rik=RpesWcruBR9PEA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-GHS4IhhHujg%2fT7e2OB-bBBI%2fAAAAAAAAI0w%2fAVmlvXlXHdw%2fs1600%2f322791_10150582376139630_181177774629_8863800_1035231379_o.jpg&ehk=eiuKPnXH%2b9bHh1Ukq6IPSWxIiXotu1JoFCYCm5NXrJE%3d&risl=&pid=ImgRaw&r=0" alt="Hotel View" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.lakwatsero.com/wp-content/uploads/2019/10/Casiguran-00-1000x670.jpg" alt="Resort View" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.hotelscombined.com/rimg/himg/f5/3d/4b/expediav2-39472908-f550e8cf_z-254263.jpg?width=1366&height=768&crop=true" alt="Pool View" loading="lazy">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+        <!-- Overlay and Welcome Text -->
+        <div class="overlay">
+            <div class="text-white p-8 max-w-2xl text-center drop-shadow-lg">
+                <h1 class="text-5xl font-bold mb-4">Welcome to Residencia del Hamor</h1>
+                <p class="text-lg mb-8">Discover comfort, elegance, and luxury in the heart of Casiguran, Sorsogon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 bg-white text-center">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Experience Luxury & Comfort</h2>
+            <p class="text-lg text-gray-600">Residencia del Hamor is your perfect getaway destination, offering breathtaking views, world-class accommodations, and top-tier amenities. Whether you're here for relaxation or adventure, we ensure an unforgettable stay.</p>
+        </div>
+    </section>
+
+<!-- Image Cards Section -->
+<section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Explore Our Resort</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:opacity-90 active:scale-95 active:shadow-lg active:opacity-100">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/13/6a/3a/residencia-del-hamor.jpg?w=500&h=-1&s=1" alt="Resort Pool" class="card-img" loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Infinity Pool</h3>
+                    <p class="text-gray-600 mt-2">Relax and unwind in our luxurious infinity pool overlooking breathtaking views.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:opacity-90 active:scale-95 active:shadow-lg active:opacity-100">
+                <img src="https://th.bing.com/th/id/OIP._bGlNUK99464WEW7G_0nqAHaE7?w=251&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Luxury Room" class="card-img" loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Luxury Rooms</h3>
+                    <p class="text-gray-600 mt-2">Enjoy our elegantly designed rooms with world-class comfort and amenities.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:opacity-90 active:scale-95 active:shadow-lg active:opacity-100">
+                <img src="https://th.bing.com/th/id/OIP.hwvSH8sqki5WdZpZBgXCjgHaFj?rs=1&pid=ImgDetMain" alt="Fine Dining" class="card-img" loading="lazy">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fine Dining</h3>
+                    <p class="text-gray-600 mt-2">Indulge in gourmet dishes crafted by top chefs using fresh, local ingredients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="bg-gray-800 py-4 text-center text-white">
+        <p>&copy; 2025 Residencia del Hamor. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

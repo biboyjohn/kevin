@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations - Residencia del Hamor</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* Interactive Room Card Effects */
+        .room-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .room-card:hover, .room-card:active {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Touch effect for mobile */
+        .room-card:active {
+            opacity: 0.8;
+        }
+    </style>
+
+    <script defer>
+        function openModal(room) {
+            document.getElementById(`${room}-modal`).classList.remove("hidden");
+        }
+        function closeModal(room) {
+            document.getElementById(`${room}-modal`).classList.add("hidden");
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    
+    <nav class="bg-transparent p-4 fixed w-full top-0 left-0 z-50 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="text-gray-900 text-2xl font-semibold hover:text-blue-600 transition">Residencia del Hamor</a>
+            <div>
+                <a href="index.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Home</a>
+                <a href="accommodations.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Accommodations</a>
+                <a href="amenities.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Amenities</a>
+                <a href="booking.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Booking</a>
+                <a href="contact.html" class="text-gray-900 mx-4 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Accommodations Section -->
+    <section id="accommodations" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Accommodations</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Room Cards -->
+                <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden room-card cursor-pointer" onclick="openModal('deluxe')">
+                    <img src="https://th.bing.com/th/id/OIP.zpoPBmjEza7fjJXurzkldAHaE8?rs=1&pid=ImgDetMain" alt="Deluxe Room" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Deluxe Room</h3>
+                        <p class="text-gray-600 mt-2">Luxury with modern amenities and stunning views.</p>
+                        <p class="text-lg font-semibold text-blue-600 mt-2">$1500</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden room-card cursor-pointer" onclick="openModal('executive')">
+                    <img src="https://phuketfit.com/wp-content/uploads/2024/01/Standard-Villa-4-1536x1024.jpg" alt="Executive Suite" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Executive Suite</h3>
+                        <p class="text-gray-600 mt-2">Spacious suite with premium service and comfort.</p>
+                        <p class="text-lg font-semibold text-blue-600 mt-2">$2500 </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden room-card cursor-pointer" onclick="openModal('villa')">
+                    <img src="https://th.bing.com/th/id/R.56a9bf74c834746f32def15242c1c4f0?rik=ZzssnVWNVE%2fEiw&riu=http%3a%2f%2fwww.fusionresortvillas.com%2fdata%2fnews%2f1950%2fngoai+that+3+(3).jpg&ehk=JrGVNgaREveBp5ktHkITaKAVTyNQFaHQhqO7Ft8wkfI%3d&risl=&pid=ImgRaw&r=0" alt="Gardenfront Villa" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Gardenfront Villa</h3>
+                        <p class="text-gray-600 mt-2">A private villa with a serene garden view.</p>
+                        <p class="text-lg font-semibold text-blue-600 mt-2">$3000</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden room-card cursor-pointer" onclick="openModal('family')">
+                    <img src="https://th.bing.com/th/id/OIP.lvQpEnKdvkNTQJfGT4DREgHaE7?rs=1&pid=ImgDetMain" alt="Family Suite" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Family Suite</h3>
+                        <p class="text-gray-600 mt-2">Perfect for families, offering space and comfort.</p>
+                        <p class="text-lg font-semibold text-blue-600 mt-2">$2800</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden room-card cursor-pointer" onclick="openModal('honeymoon')">
+                    <img src="https://th.bing.com/th/id/R.751f6af924c419e6a62996a7f6b9228b?rik=5Y9rY7%2fWAlVc9g&riu=http%3a%2f%2ffayettevillewolvesparadisehotel.weebly.com%2fuploads%2f2%2f3%2f7%2f8%2f23785471%2fs184130488415621817_p3_i1_w2128.jpeg&ehk=I%2bRBTfRBl2eMTjFuchI%2bWaOhiRv4a0mnsaneNd1Enc4%3d&risl=&pid=ImgRaw&r=0" alt="Honeymoon Suite" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Honeymoon Suite</h3>
+                        <p class="text-gray-600 mt-2">Romantic suite with a private balcony and jacuzzi.</p>
+                        <p class="text-lg font-semibold text-blue-600 mt-2">$3200</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 shadow-lg rounded-lg overflow-hidden room-card cursor-pointer" onclick="openModal('penthouse')">
+                    <img src="https://www.sycuan.com/wp-content/uploads/2018/07/Penthouse-Living-Room.jpg" alt="Penthouse Suite" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Penthouse Suite</h3>
+                        <p class="text-gray-600 mt-2">Ultimate luxury with a panoramic ocean view.</p>
+                        <p class="text-lg font-semibold text-blue-600 mt-2">$5000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
